@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
 import { DateController } from './date.controller';
 import { DateService } from './date.service';
-import { DatabaseService } from 'src/database/database.service';
+import { DatabaseModule } from 'src/database/database.module';
 
 @Module({
-  imports: [DatabaseService],
-  controllers: [DateController],
-  providers: [DateService],
+	imports: [DatabaseModule],
+	controllers: [DateController],
+	providers: [DateService],
 })
-export class DateModule {}
+export class DateModule { }
+

@@ -8,18 +8,20 @@ import { VehicleModule } from './vehicle/vehicle.module';
 import { CenterModule } from './center/center.module';
 import { TravelModule } from './travel/travel.module';
 import { DriverReportModule } from './driver_report/driver_report.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [
-    DatabaseModule,
-    UsersModule,
-    DateModule,
-    VehicleModule,
-    CenterModule,
-    TravelModule,
-    DriverReportModule,
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+	imports: [
+		ConfigModule.forRoot({ isGlobal: true }),
+		DatabaseModule,
+		UsersModule,
+		DateModule,
+		VehicleModule,
+		CenterModule,
+		TravelModule,
+		DriverReportModule,
+	],
+	controllers: [AppController],
+	providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

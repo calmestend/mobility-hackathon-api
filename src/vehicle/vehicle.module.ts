@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { VehicleController } from './vehicle.controller';
 import { VehicleService } from './vehicle.service';
-import { DatabaseService } from 'src/database/database.service';
+import { DatabaseModule } from 'src/database/database.module';
 
 @Module({
-  imports: [DatabaseService],
-  controllers: [VehicleController],
-  providers: [VehicleService],
+	imports: [DatabaseModule],
+	controllers: [VehicleController],
+	providers: [VehicleService],
 })
-export class VehicleModule {}
+export class VehicleModule { }
