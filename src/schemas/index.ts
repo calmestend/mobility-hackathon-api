@@ -6,12 +6,12 @@ import * as vehicleSchema from '../vehicle/schema';
 import * as dateSchema from '../date/schema';
 
 export const schemas = {
-  ...userSchema,
-  ...centerSchema,
-  ...travelSchema,
-  ...driverReportSchema,
-  ...vehicleSchema,
-  ...dateSchema,
+	...userSchema,
+	...centerSchema,
+	...travelSchema,
+	...driverReportSchema,
+	...vehicleSchema,
+	...dateSchema,
 };
 
 export type DatabaseSchema = typeof schemas;
